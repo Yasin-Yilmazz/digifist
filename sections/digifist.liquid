@@ -1,6 +1,6 @@
 {{ 'digifist.css' | asset_url | stylesheet_tag }}
 
-<div>
+<div class="main_content">
   test123
 </div>
 
@@ -9,7 +9,13 @@
     "name": "Digifist",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_content",
+        "label": "text here"
+      }
+    ],
     "presets": [
       {
         "name": "Digifist"
