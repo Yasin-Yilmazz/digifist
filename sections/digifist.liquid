@@ -2,10 +2,15 @@
 
 <div class="main_content">
   <div class="left_side">
-    {% section 'digi-left' %}
-  </div>
+    <img
+      src="{{  section.settings.left_img | img_url:"master" }}"
+      class="left_img"
+      alt="main image"></div>
   <div class="right_side">
-    {% section 'digi-right' %}
+    <div class="title">{{ section.settings.title }}</div>
+    <div class="desc"></div>
+    <div class="button"></div>
+    <div class="scroll"></div>
   </div>
 </div>
 
@@ -14,7 +19,17 @@
     "name": "Digifist",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_img",
+        "label": "left big image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": " Right side title"
+      }
+    ],
     "presets": [
       {
         "name": "Digifist"
