@@ -4,10 +4,10 @@
 }
 
 .main_content .left_side {
-  width: 50%;
+  max-width: 50%;
   height: 100vh;
 }
-.main_content .left_side {
+.main_content .left_side .left_img {
   height: 864px;
   width: 720px;
   left: 0px;
@@ -16,6 +16,24 @@
 }
 .main_content .right_side {
   width: 50%;
-  margin: 1rem;
+  padding: 96px 106px 10px 120px;
   height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.main_content .right_side .title {
+  font-family: ITC Avant Garde Gothic Pro;
+  font-size: 31px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.main_content .right_side .desc {
+}
+.main_content .right_side .button {
+}
+.main_content .right_side .scroll {
 }

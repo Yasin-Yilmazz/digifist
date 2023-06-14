@@ -6,7 +6,12 @@
       src="{{  section.settings.left_img | img_url:"master" }}"
       class="left_img"
       alt="main image"></div>
-  <div class="right_side">left</div>
+  <div class="right_side">
+    <div class="title">{{ section.settings.title }}</div>
+    <div class="desc"></div>
+    <div class="button"></div>
+    <div class="scroll"></div>
+  </div>
 </div>
 
 {% schema %}
@@ -19,6 +24,10 @@
         "type": "image_picker",
         "id": "left_img",
         "label": "big_image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
       }
     ],
     "presets": [
