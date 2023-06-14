@@ -82,7 +82,9 @@
           "type": "right",
           "settings": {
             "title": "Everyday items, we have something to suit every occasion.",
-            "desc": "At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus."
+            "desc": "At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus.",
+            "digi_button": "Shop all everyday items",
+            "collection": ""
           }
         }
       },
