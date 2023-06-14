@@ -1,4 +1,6 @@
 {{ 'digifist.css' | asset_url | stylesheet_tag }}
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
 <div class="main_content">
   {% for block in section.blocks %}
@@ -21,12 +23,53 @@
             {{ block.settings.digi_button }}
           </a>
         </div>
-        <div class="scroll"></div>
+        <div class="scroll">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              {% for product in block.settings.collection.products %}
+
+                <div class="swiper-slide">{{ product.featured_image | img_url: 'master' }}
+                </div>
+              {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
       </div>
     {% endcase %}
   {% endfor %}
 
 </div>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination'
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar'
+    }
+  });
+</script>
 
 {% schema %}
   {
