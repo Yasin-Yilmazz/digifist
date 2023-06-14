@@ -1,17 +1,25 @@
 {{ 'digifist.css' | asset_url | stylesheet_tag }}
 
 <div class="main_content">
-  <div class="left_side">
-    <img
-      src="{{  section.settings.left_img | img_url:"master" }}"
-      class="left_img"
-      alt="main image"></div>
-  <div class="right_side">
-    <div class="title">{{ section.settings.title }}</div>
-    <div class="desc"></div>
-    <div class="button"></div>
-    <div class="scroll"></div>
-  </div>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when "left" %}
+      <div class="left_side">
+        <img
+          src="{{  block.settings.left_img | img_url:"master" }}"
+          class="left_img"
+          alt="main image">
+      </div>
+      {% when "right" %}
+      <div class="right_side">
+        <div class="title">{{ block.settings.title }}</div>
+        <div class="desc"></div>
+        <div class="button"></div>
+        <div class="scroll"></div>
+      </div>
+    {% endcase %}
+  {% endfor %}
+
 </div>
 
 {% schema %}
