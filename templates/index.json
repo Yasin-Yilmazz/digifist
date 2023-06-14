@@ -68,10 +68,16 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "69bf48ba-7d7a-4b0f-b864-ddf1ddfe9372": {
+      "type": "digifist",
+      "settings": {
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "69bf48ba-7d7a-4b0f-b864-ddf1ddfe9372"
   ]
 }
