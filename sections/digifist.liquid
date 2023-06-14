@@ -1,7 +1,11 @@
 {{ 'digifist.css' | asset_url | stylesheet_tag }}
 
 <div class="main_content">
-  test123
+  <div class="left_side"><img
+      src="{{  section.settings.left_img }}"
+      class="left_img"
+      alt="main image"></div>
+  <div class="right_side">left</div>
 </div>
 
 {% schema %}
@@ -9,7 +13,13 @@
     "name": "Digifist",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_img",
+        "label": "big_image"
+      }
+    ],
     "presets": [
       {
         "name": "Digifist"
