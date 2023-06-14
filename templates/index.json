@@ -71,9 +71,25 @@
     },
     "69bf48ba-7d7a-4b0f-b864-ddf1ddfe9372": {
       "type": "digifist",
+      "blocks": {
+        "cd560635-65a3-4a20-a4f5-c1b0e78f015c": {
+          "type": "left",
+          "settings": {
+            "left_img": "shopify:\/\/shop_images\/Lifestyle.jpg"
+          }
+        },
+        "4eb612e2-8a50-4657-9c79-6353298d0e83": {
+          "type": "right",
+          "settings": {
+            "title": "Everyday items, we have something to suit every occasion."
+          }
+        }
+      },
+      "block_order": [
+        "cd560635-65a3-4a20-a4f5-c1b0e78f015c",
+        "4eb612e2-8a50-4657-9c79-6353298d0e83"
+      ],
       "settings": {
-        "left_img": "shopify:\/\/shop_images\/Lifestyle.jpg",
-        "title": "Everyday items, we have something to suit every occasion."
       }
     }
   },
