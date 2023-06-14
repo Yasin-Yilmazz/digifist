@@ -27,8 +27,8 @@
           <div class="swiper">
             <div class="swiper-wrapper">
               {% for product in block.settings.collection.products %}
-
-                <div class="swiper-slide">{{ product.featured_image | img_url: 'master' }}
+                <div class="swiper-slide">
+                  <img src="{{ product.featured_image | img_url: 'master' }}" alt="hoodie">
                 </div>
               {% endfor %}
             </div>
@@ -50,7 +50,7 @@
   const swiper = new Swiper('.swiper', {
 
     // Optional parameters
-    direction: 'vertical',
+    direction: 'horizontal',
     loop: true,
 
     // If we need pagination
