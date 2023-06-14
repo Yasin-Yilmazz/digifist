@@ -4,8 +4,8 @@
 }
 
 .main_content .left_side {
-  max-width: 50%;
-  height: 100vh;
+  display: flex;
+  flex: 1;
 }
 .main_content .left_side .left_img {
   height: 864px;
