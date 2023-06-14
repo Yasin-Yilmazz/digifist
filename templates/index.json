@@ -81,7 +81,8 @@
         "4eb612e2-8a50-4657-9c79-6353298d0e83": {
           "type": "right",
           "settings": {
-            "title": "Everyday items, we have something to suit every occasion."
+            "title": "Everyday items, we have something to suit every occasion.",
+            "desc": "At suspendisse augue lectus arcu, accumsan ut sit posuere vitae sit tincidunt semper eu proin leo gravida cursus."
           }
         }
       },
