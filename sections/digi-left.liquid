@@ -1,0 +1,27 @@
+{{ 'digifist.css' | asset_url | stylesheet_tag }}
+
+<div class="">
+  <img
+    src="{{  section.settings.left_img | img_url:"master" }}"
+    class="left_img"
+    alt="main image">
+</div>
+
+{% schema %}
+  {
+    "name": "digi_left",
+    "class": "section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "left_img",
+        "label": "left big image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Digifist left"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,27 @@
+{{ 'digifist.css' | asset_url | stylesheet_tag }}
+
+<div class="">
+  <div class="title">{{ section.settings.title }}</div>
+  <div class="desc"></div>
+  <div class="button"></div>
+  <div class="scroll"></div>
+</div>
+
+{% schema %}
+  {
+    "name": "digi_right",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": " Right side title"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Digifist Right"
+      }
+    ]
+  }
+{% endschema %}

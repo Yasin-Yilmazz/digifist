@@ -13,6 +13,7 @@
   left: 0px;
   top: 0px;
   border-radius: 0px;
+  display: flex;
 }
 .main_content .right_side {
   width: 50%;
