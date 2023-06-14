@@ -1,8 +1,9 @@
 {{ 'digifist.css' | asset_url | stylesheet_tag }}
 
 <div class="main_content">
-  <div class="left_side"><img
-      src="{{  section.settings.left_img }}"
+  <div class="left_side">
+    <img
+      src="{{  section.settings.left_img | img_url:"master" }}"
       class="left_img"
       alt="main image"></div>
   <div class="right_side">left</div>
