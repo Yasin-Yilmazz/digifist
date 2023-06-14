@@ -72,7 +72,8 @@
     "69bf48ba-7d7a-4b0f-b864-ddf1ddfe9372": {
       "type": "digifist",
       "settings": {
-        "left_img": "shopify:\/\/shop_images\/Lifestyle.jpg"
+        "left_img": "shopify:\/\/shop_images\/Lifestyle.jpg",
+        "title": "Everyday items, we have something to suit every occasion."
       }
     }
   },
