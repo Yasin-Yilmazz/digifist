@@ -16,7 +16,10 @@
         <div class="desc">
           {{ block.settings.desc }}
         </div>
-        <div class="button"></div>
+        <div class="digi_button">
+          <a href="{{block.settings.collection.url}} ">{{ block.settings.button }}
+          </a>
+        </div>
         <div class="scroll"></div>
       </div>
     {% endcase %}
@@ -53,6 +56,14 @@
             "type": "text",
             "id": "desc",
             "label": " Right side description"
+          }, {
+            "type": "text",
+            "id": "digi_button",
+            "label": " Right side button"
+          }, {
+            "type": "collection",
+            "id": "collection",
+            "label": " collections"
           }
         ]
       }
