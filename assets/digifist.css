@@ -41,7 +41,7 @@
   text-align: left;
   color: #666666;
 }
-.main_content .right_side .digi_button {
+.main_content .right_side .digi_button a {
   font-family: "Avenir";
   font-style: normal;
   font-weight: 900;
@@ -51,6 +51,7 @@
   align-items: center;
   text-transform: capitalize;
   color: #000000;
+  margin-top: 32px;
 }
 .main_content .right_side .scroll {
 }
