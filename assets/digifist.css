@@ -17,7 +17,7 @@
 }
 .main_content .right_side {
   width: 50%;
-  padding: 96px 106px 10px 120px;
+  padding: 96px 106px 10px 20px;
   height: 100vh;
   display: flex;
   flex-flow: column;
@@ -60,5 +60,84 @@
   margin-top: 70px;
 }
 .swiper-slide img {
-  width: 100%;
+  max-width: 230px;
+  height: 310px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-next {
+  padding: 19px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.swiper-button-prev img {
+  transform: rotate(180deg);
+  padding: 14px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.swiper-button-disabled {
+  display: none !important;
+}
+
+.price_colors {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_name {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.price {
+  font-family: Avenir;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.colors {
+  display: flex;
+}
+.swiper .colors label {
+  font-size: 0;
+  display: block;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1.5px solid #ffffff;
+}
+
+.swiper .colors input {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.swiper .colors input:checked + label {
+  border: 2.5px solid white;
+  outline: 0.5px solid black;
 }

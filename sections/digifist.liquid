@@ -28,15 +28,39 @@
             <div class="swiper-wrapper">
               {% for product in block.settings.collection.products %}
                 <div class="swiper-slide">
-                  <img src="{{ product.featured_image | img_url: 'master' }}" alt="hoodie">
-                  <div class="price">{{ product.price | money_with_currency }}
+                  <img
+                    src="{{ product.featured_image | img_url: 'master' }}"
+                    class="slider_image"
+                    alt="hoodie">
+                  <div class="product_name">{{ product.title }}
+                  </div>
+                  <div class="price_colors">
+                    <div class="price">{{ product.price | money }}
+                    </div>
+                    <div class="colors">
+                      {% for variant in product.variants %}
+                        <input
+                          type="radio"
+                          id="{{ variant.id }}"
+                          name="variant-color">
+                        <label
+                          class="changeLabel"
+                          variantImg="{{ variant.image | img_url:'master' }}"
+                          style="background-color: {{ variant.title | downcase }}"
+                          for="{{ variant.id }}"></label>
+                      {% endfor %}
+                    </div>
                   </div>
                 </div>
               {% endfor %}
             </div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev">
+              <img src="{{"right-arrow.svg"| asset_url}}" alt="">
+            </div>
+            <div class="swiper-button-next">
+              <img src="{{"right-arrow.svg"| asset_url}}" alt="">
+            </div>
 
           </div>
         </div>
@@ -50,11 +74,12 @@
   const swiper = new Swiper('.swiper', {
 
     slidesPerView: 2.5,
-    spaceBetween: 32,
+
+    spaceBetween: 65,
 
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
 
     // Navigation arrows
     navigation: {
@@ -63,6 +88,20 @@
     }
 
   });
+</script>
+
+<script>
+  let labels = document.getElementsByClassName("changeLabel");
+  for (let i = 0; i < labels.length; i++) {
+    labels[i].addEventListener('click', function(e) {
+      let variantImg = e.target.getAttribute("variantimg");
+      e
+        .target
+        .closest(".swiper-slide")
+        .querySelector(".slider_image")
+        .src = variantImg;
+    });
+  }
 </script>
 
 {% schema %}
