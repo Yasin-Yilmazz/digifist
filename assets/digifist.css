@@ -55,3 +55,10 @@
 }
 .main_content .right_side .scroll {
 }
+
+.swiper-slide {
+  margin-top: 70px;
+}
+.swiper-slide img {
+  width: 100%;
+}

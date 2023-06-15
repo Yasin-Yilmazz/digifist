@@ -29,15 +29,15 @@
               {% for product in block.settings.collection.products %}
                 <div class="swiper-slide">
                   <img src="{{ product.featured_image | img_url: 'master' }}" alt="hoodie">
+                  <div class="price">{{ product.price | money_with_currency }}
+                  </div>
                 </div>
               {% endfor %}
             </div>
-            <div class="swiper-pagination"></div>
 
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
-            <div class="swiper-scrollbar"></div>
           </div>
         </div>
       </div>
@@ -49,25 +49,19 @@
 <script>
   const swiper = new Swiper('.swiper', {
 
+    slidesPerView: 2.5,
+    spaceBetween: 32,
+
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination'
-    },
 
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar'
     }
+
   });
 </script>
 
